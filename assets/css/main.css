@@ -117,7 +117,7 @@ html, body {
   justify-content: center;
   background: #FFF;
   position: absolute;
-  bottom: 10%;
+  top: 55%;
   border-radius: 100%;
   text-align: center;
   left: 50%;
@@ -128,7 +128,7 @@ html, body {
   background-position: center; }
   @media screen and (max-width: 800px) {
     .user-module .userprofile {
-      bottom: -20%; } }
+      top: 85%; } }
 .user-module .userdesc {
   display: flex;
   flex-flow: column wrap;
