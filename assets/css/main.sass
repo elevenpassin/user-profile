@@ -35,6 +35,8 @@ html,body
     a, a:hover, a:visited, a:active
         text-decoration: none
         color: inherit
+    @media screen and (max-width: $break-md)
+        +flex(column wrap, center)
     .brand
         +min-size(10px, 1em)
         text-transform: capitalize
@@ -42,9 +44,10 @@ html,body
         font-size: 20px
         font-weight: bold
         @media screen and (max-width: $break-md)
+            margin-top: 2em
+            margin-bottom: 2em
             +flex(row wrap, space-around)
             text-align: center
-
     .nav
         +flex(row wrap, flex-end)
         +min-size(600px, 1em)
@@ -52,6 +55,9 @@ html,body
         margin: .5em
         @media screen and (max-width: $break-md)
             +flex(column wrap, flex-start)
+            +min-size(100%, 15px)
+            margin: 0
+            margin-bottom: .5em
         a
             +flex(column wrap, center)
             +min-size(12px, 15px)
@@ -60,6 +66,8 @@ html,body
             transition: all .5s
             border-radius: 20px
             @media screen and (max-width: $break-md)
+                border-radius: 0
                 text-align: center
+                margin-left: 0
         a:hover
             background: darken($theme-color, 10%)
