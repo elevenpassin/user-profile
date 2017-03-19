@@ -136,7 +136,7 @@ html, body {
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
-    margin-top: 3em;
+    margin-top: 5em;
     min-width: 0;
     min-height: 400px;
     width: 50%;
@@ -153,12 +153,16 @@ html, body {
     .user-module #gallery .gallery-img {
       min-width: 600px;
       min-height: 400px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
       margin: 0.5em;
       border-radius: 7px;
       background: rgba(120, 135, 132, 0.2);
       background-size: 100%;
       background-position: center;
-      transition: filter 0.5s; }
+      transition: filter 0.5s;
+      overflow: hidden; }
       @media screen and (max-width: 800px) {
         .user-module #gallery .gallery-img {
           min-width: 100%;
@@ -167,7 +171,30 @@ html, body {
           margin: 0;
           margin-top: 0.1em;
           margin-bottom: 0.1em; } }
+      .user-module #gallery .gallery-img .caption {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        color: #FFF;
+        text-align: center;
+        width: 100%;
+        height: 400px;
+        opacity: 0;
+        transition: all 1s;
+        text-shadow: 0px 0px 50px black;
+        font-size: 30px; }
+        @media screen and (max-width: 800px) {
+          .user-module #gallery .gallery-img .caption {
+            min-width: 100%;
+            min-height: 10px; } }
     .user-module #gallery .gallery-img:hover {
       filter: contrast(200%); }
+    .user-module #gallery .gallery-img:hover .caption {
+      opacity: 1;
+      background: linear-gradient(45deg, #3891A6, transparent, #FDE74C); }
+      @media screen and (max-width: 800px) {
+        .user-module #gallery .gallery-img:hover .caption {
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.5); } }
 
 /*# sourceMappingURL=main.css.map */
