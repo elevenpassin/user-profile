@@ -148,14 +148,16 @@ html, body {
       font-size: 20px; }
       .user-module .userdesc .social i {
         margin: 0.5em; }
-  .user-module #gallery .gallery-img {
-    min-width: 600px;
-    min-height: 400px;
-    margin: 0.5em;
-    border-radius: 7px;
-    background: rgba(120, 135, 132, 0.2);
-    background-size: 1005;
-    background-position: center; }
+  .user-module #gallery {
+    min-height: 1000px; }
+    .user-module #gallery .gallery-img {
+      min-width: 600px;
+      min-height: 400px;
+      margin: 0.5em;
+      border-radius: 7px;
+      background: rgba(120, 135, 132, 0.2);
+      background-size: 1005;
+      background-position: center; }
 
 @keyframes gallery-img {
   from {

@@ -31,8 +31,6 @@ window.addEventListener("scroll", function(){
 
                 gallery.append(tab);
             }
-            gallery.scrollIntoView();
-        }, 1000)
-
+        }, 500)
     }
 })
