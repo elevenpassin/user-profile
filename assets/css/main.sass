@@ -1,0 +1,65 @@
+$theme-color: #52AD9C
+$font-color: #FFF
+
+$break-small: 320px
+$break-md: 800px
+$break-large: 1200px
+
+
+=flex($direction, $position)
+    display: flex
+    flex-flow: $direction
+    justify-content: $position
+
+=min-size($width, $height)
+    min-width: $width
+    min-height: $height
+
+.center-text
+    text-align: center
+.center-content-v
+    +flex(column wrap, center)
+
+html,body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    +flex(column wrap, flex-start)
+
+.header
+    +flex(row wrap, space-around)
+    +min-size(100%, .1em)
+    background: $theme-color
+    color: $font-color
+    font-family: "Raleway", sans-serif
+    a, a:hover, a:visited, a:active
+        text-decoration: none
+        color: inherit
+    .brand
+        +min-size(10px, 1em)
+        text-transform: capitalize
+        margin: .5em
+        font-size: 20px
+        font-weight: bold
+        @media screen and (max-width: $break-md)
+            +flex(row wrap, space-around)
+            text-align: center
+
+    .nav
+        +flex(row wrap, flex-end)
+        +min-size(600px, 1em)
+        text-transform: capitalize
+        margin: .5em
+        @media screen and (max-width: $break-md)
+            +flex(column wrap, flex-start)
+        a
+            +flex(column wrap, center)
+            +min-size(12px, 15px)
+            padding: .5em 1em .5em 1em
+            margin-left: 1em
+            transition: all .5s
+            border-radius: 20px
+            @media screen and (max-width: $break-md)
+                text-align: center
+        a:hover
+            background: darken($theme-color, 10%)
