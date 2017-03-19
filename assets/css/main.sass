@@ -32,6 +32,9 @@ $anchor-size: 50 * $jumbotron-size/100
 .center-content-h
     +flex(row wrap, center)
 
+.row
+    +flex(row wrap, flex-start)
+
 html,body
     margin: 0
     padding: 0
@@ -100,3 +103,32 @@ html,body
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%,  0% 100%)
     .jumbotron:hover
         background-position: top
+    .userprofile
+        +min-size(250px, 250px)
+        +flex(column wrap, center)
+        background: #FFF
+        position: absolute
+        bottom: 10%
+        border-radius: 100%
+        text-align: center
+        left: 50%
+        transform: translate(-50%, 0%)
+        border: 5px solid #FFF
+        background: url('../img/women76.jpg') no-repeat
+        background-size: cover
+        background-position: center
+        @media screen and (max-width: $break-md)
+            bottom: -20%
+    .userdesc
+        +flex(column wrap, flex-start)
+        margin-top: 3em
+        +min-size(0, 500px)
+        width: 50%
+        font-size: 16px
+        font-family: "Oxygen", sans-serif
+        text-align: center
+        .social
+            +flex(row wrap, center)
+            font-size: 20px
+            i
+                margin: .5em
