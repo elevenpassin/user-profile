@@ -1,10 +1,13 @@
 $theme-color: #52AD9C
-$font-color: #FFF
+$font-color: darken($theme-color, 30%)
+
 
 $break-small: 320px
 $break-md: 800px
 $break-large: 1200px
 
+$jumbotron-size: 550px
+$anchor-size: 50 * $jumbotron-size/100
 
 =flex($direction, $position)
     display: flex
@@ -15,10 +18,19 @@ $break-large: 1200px
     min-width: $width
     min-height: $height
 
+=size($width, $height)
+    min-width: $width
+    min-height: $height
+    width: $width
+    height: $height
+    max-width: $width
+    max-height: $height
 .center-text
     text-align: center
 .center-content-v
     +flex(column wrap, center)
+.center-content-h
+    +flex(row wrap, center)
 
 html,body
     margin: 0
@@ -30,13 +42,14 @@ html,body
     +flex(row wrap, space-around)
     +min-size(100%, .1em)
     background: $theme-color
-    color: $font-color
+    color: #FFF
     font-family: "Raleway", sans-serif
+    z-index: 500000
+    @media screen and (max-width: $break-md)
+        +flex(column wrap, center)
     a, a:hover, a:visited, a:active
         text-decoration: none
         color: inherit
-    @media screen and (max-width: $break-md)
-        +flex(column wrap, center)
     .brand
         +min-size(10px, 1em)
         text-transform: capitalize
@@ -71,3 +84,19 @@ html,body
                 margin-left: 0
         a:hover
             background: darken($theme-color, 10%)
+
+.user-module
+    .jumbotron
+        z-index: 1000
+        perspective: 1000px
+        +flex(column wrap, flex-start)
+        +min-size(100%, $jumbotron-size)
+        background: darken($theme-color, 40%)
+        background: url('../img/woods_1024.jpg') no-repeat
+        background-size: cover
+        background-position: center
+        transition: all 3s
+        overflow: hidden
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%,  0% 100%)
+    .jumbotron:hover
+        background-position: top

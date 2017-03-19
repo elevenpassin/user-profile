@@ -6,6 +6,11 @@
   flex-flow: column wrap;
   justify-content: center; }
 
+.center-content-h {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -22,15 +27,16 @@ html, body {
   min-height: 0.1em;
   background: #52AD9C;
   color: #FFF;
-  font-family: "Raleway", sans-serif; }
-  .header a, .header a:hover, .header a:visited, .header a:active {
-    text-decoration: none;
-    color: inherit; }
+  font-family: "Raleway", sans-serif;
+  z-index: 500000; }
   @media screen and (max-width: 800px) {
     .header {
       display: flex;
       flex-flow: column wrap;
       justify-content: center; } }
+  .header a, .header a:hover, .header a:visited, .header a:active {
+    text-decoration: none;
+    color: inherit; }
   .header .brand {
     min-width: 10px;
     min-height: 1em;
@@ -80,5 +86,23 @@ html, body {
           margin-left: 0; } }
     .header .nav a:hover {
       background: #428a7d; }
+
+.user-module .jumbotron {
+  z-index: 1000;
+  perspective: 1000px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  min-width: 100%;
+  min-height: 550px;
+  background: #10231f;
+  background: url("../img/woods_1024.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 3s;
+  overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%); }
+.user-module .jumbotron:hover {
+  background-position: top; }
 
 /*# sourceMappingURL=main.css.map */
