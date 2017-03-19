@@ -16,7 +16,7 @@ window.addEventListener("scroll", function(){
                 var tab = document.createElement("Div");
                 tab.classList.add("gallery-img");
                 tab.style.background = "url(" + images[i] +  ") no-repeat";
-
+                gallery.append(tab);
                 tab.animate([
                     {
                         backgroundSize: '0%',
@@ -28,8 +28,6 @@ window.addEventListener("scroll", function(){
                     }
                 ], 500);
                 tab.style.backgroundSize = "100%";
-
-                gallery.append(tab);
             }
         }, 500)
     }

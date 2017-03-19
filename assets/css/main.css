@@ -156,14 +156,18 @@ html, body {
       margin: 0.5em;
       border-radius: 7px;
       background: rgba(120, 135, 132, 0.2);
-      background-size: 1005;
-      background-position: center; }
-
-@keyframes gallery-img {
-  from {
-    background-position: center; }
-  to {
-    background-size: 100%;
-    background-position: center; } }
+      background-size: 100%;
+      background-position: center;
+      transition: filter 0.5s; }
+      @media screen and (max-width: 800px) {
+        .user-module #gallery .gallery-img {
+          min-width: 100%;
+          min-height: auto;
+          border-radius: 0%;
+          margin: 0;
+          margin-top: 0.1em;
+          margin-bottom: 0.1em; } }
+    .user-module #gallery .gallery-img:hover {
+      filter: contrast(200%); }
 
 /*# sourceMappingURL=main.css.map */
