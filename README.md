@@ -5,3 +5,4 @@ A very simple user profile boilerplate that covers user information, social medi
 - Display a header image for the appropriate user.
 - Display user image, user information and social links.
 - A simple gallery with image captions. 
+- Responsive Web Design
